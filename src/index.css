@@ -1,13 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+/* Global body styles */
 body {
+  @apply bg-darkBg text-white font-noto leading-relaxed;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Headers use retro gaming font */
+h1, h2, h3 {
+  @apply font-retro text-retroRed tracking-widest;
+}
+
+/* Custom button style */
+.btn-primary {
+  @apply bg-retroRed hover:bg-retroRedDark text-white font-semibold py-2 px-4 rounded transition duration-300;
+}
+
+/* Input fields */
+.input-field {
+  @apply bg-darkGray text-white p-3 rounded w-full border border-gray-700 focus:outline-none focus:ring-2 focus:ring-retroRed;
+}
+
+/* Form container */
+.form-container {
+  @apply bg-darkForm p-8 rounded-xl shadow-lg max-w-md w-full;
+}
+
+/* Centered page layout */
+.page-wrapper {
+  @apply min-h-screen flex items-center justify-center;
+}
+
+/* Link style */
+.link-text {
+  @apply text-gold hover:underline cursor-pointer;
 }
